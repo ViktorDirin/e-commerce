@@ -4,7 +4,7 @@ const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
-const autoprefixer = require('gulp-autoprefixer');
+// const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
 
 function scripts() {
@@ -17,7 +17,7 @@ function scripts() {
 
 function styles() {
   return src('app/scss/style.scss')
-    .pipe(autoprefixer('last 2 version'))
+    // .pipe(autoprefixer('last 2 version'))
     .pipe(concat('style.min.css'))
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(dest("app/css"))

@@ -1,13 +1,23 @@
-// $accent: #fe3e57;
+$accent: #ff834e;
 // $defoult: #8d8d8d;
 // $title: #29282d;
 // $bg: #f6f6f6;
 // $border: #ececec;
 
-// %quicksand-400{
-//     font-family: 'Quicksand-Regular', sans-serif;
-//     font-weight: 400;
-// }
+%Montserrat {
+  font-family: "Montserrat-Regular", Arial, sans-serif;
+  font-weight: 400;
+}
+
+%Montserrat-300 {
+  font-family: "Montserrat-Light", Arial, sans-serif;
+  font-weight: 300;
+}
+
+%TTNoms {
+  font-family: "TTNoms-Regular", Arial, sans-serif;
+  font-weight: 400;
+}
 
 // %btn{
 //     cursor: pointer;
@@ -25,9 +35,9 @@
 //         }
 // }
 
-// @function max($numbers...) {
-//     @return m#{a}x(#{$numbers});
-// }
-// @function min($numbers...) {
-//     @return m#{i}n(#{$numbers});
-// }
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
