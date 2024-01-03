@@ -1,23 +1,28 @@
 $accent: #ff834e;
-// $defoult: #8d8d8d;
-// $title: #29282d;
-// $bg: #f6f6f6;
-// $border: #ececec;
 
 %Montserrat {
-  font-family: "Montserrat-Regular", Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Montserrat-Regular";
+}
+
+%Montserrat-800 {
+  font-family: "Montserrat-ExtraBold";
+}
+
+%Montserrat-600 {
+  font-family: "Montserrat-Bold";
 }
 
 %Montserrat-300 {
-  font-family: "Montserrat-Light", Arial, sans-serif;
+  font-family: "Montserrat-Light", sans-serif;
   font-weight: 300;
 }
 
 %TTNoms {
-  font-family: "TTNoms-Regular", Arial, sans-serif;
+  font-family: "TTNoms-Regular", sans-serif;
   font-weight: 400;
 }
+
+// filter: invert(0%) sepia(6%) saturate(6183%) hue-rotate(0deg) brightness(100%) contrast(77%);
 
 // %btn{
 //     cursor: pointer;

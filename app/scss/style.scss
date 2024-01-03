@@ -162,6 +162,130 @@
 
 // ----------------------------------- TOP END ------------------------
 
+// ----------------------------------- HowWeWork  ------------------------
+
+.howwework {
+  background-color: #202020;
+  //   z-index: -5;
+  &__inner {
+    padding: 86px 0;
+  }
+  &__title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &-wraper {
+    position: relative;
+    display: flex;
+    // height: 750px;
+    padding: 160px 0 60px;
+  }
+  &-bg-image {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -96px;
+    left: 0;
+    background-image: url(../images/HowWeWork-Path.svg);
+    background-position: center;
+    // background-size: cover;
+    background-repeat: no-repeat;
+    // z-index: -2;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: url(../images/HowWeWork-filter.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 5;
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 940px;
+    margin: 0 auto;
+    z-index: 5;
+  }
+}
+.cards {
+  &__item {
+    text-align: center;
+    margin-bottom: 110px;
+    height: fit-content;
+    width: 33%;
+    &:hover {
+      .cards__item {
+        &-box {
+          background-color: #ffffff;
+        }
+        &-num {
+          color: $accent;
+          opacity: 1;
+        }
+        &-img {
+          filter: invert(0%) sepia(6%) saturate(6183%) hue-rotate(0deg)
+            brightness(100%) contrast(77%);
+        }
+        &-link {
+          text-decoration: underline;
+          &::after {
+            position: absolute;
+            content: "+";
+            width: 20px;
+            height: 20px;
+            top: 0;
+            right: -26px;
+            background-color: $accent;
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+    &-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 180px;
+      border-radius: 90px;
+      background-color: #1d1d1d;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    &-img {
+      filter: invert(66%) sepia(96%) saturate(1980%) hue-rotate(325deg)
+        brightness(101%) contrast(101%);
+    }
+    &-num {
+      position: absolute;
+      @extend %Montserrat-600;
+      color: #ffffff;
+      opacity: 0.1;
+      font-size: 118px;
+      top: -64px;
+      right: -34px;
+      z-index: -1;
+    }
+    &-link {
+      position: relative;
+      text-transform: uppercase;
+      line-height: 22px;
+    }
+  }
+}
+// ----------------------------------- HowWeWork END ------------------------
+
 // ----------------------------------- FOOTER ----------------------------
 
 .footer {
