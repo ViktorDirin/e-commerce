@@ -286,6 +286,98 @@
 }
 // ----------------------------------- HowWeWork END ------------------------
 
+// ----------------------------------- FEATURES ----------------------------
+
+.features {
+  background-color: #202020;
+  &__inner {
+    padding: 110px 0;
+    background-image: url(../images/features-filter.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__wraper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__info {
+    width: 630px;
+    text-align: left;
+    &-title {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 40px;
+      margin-bottom: 40px;
+    }
+    &-text {
+      width: 570px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px;
+      margin-bottom: 40px;
+    }
+    &-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-item {
+      height: fit-content;
+    }
+  }
+  &__tabs {
+    text-align: center;
+    &-content {
+      display: none;
+      border: none;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+    &-input {
+      display: none;
+    }
+    &-label {
+      display: inline-block;
+      margin: 0 100px 0 0;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+      text-align: center;
+      color: #ffffff;
+      opacity: 0.4;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+#tab0:checked ~ #label-0,
+#tab1:checked ~ #label-1,
+#tab2:checked ~ #label-2,
+#tab3:checked ~ #label-3 {
+  color: $accent;
+  opacity: 1;
+}
+
+.features__tabs-input + #tab0:checked ~ #content0,
+.features__tabs-input + #tab1:checked ~ #content1,
+.features__tabs-input + #tab2:checked ~ #content2,
+.features__tabs-input + #tab3:checked ~ #content3 {
+  display: block;
+}
+
+// ----------------------------------- FEATURES END ----------------------------
+
 // ----------------------------------- FOOTER ----------------------------
 
 .footer {
