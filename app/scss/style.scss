@@ -485,7 +485,7 @@
 .clients {
   background-color: #202020;
   &__inner {
-    padding: 120px 0;
+    padding: 120px 0 200px;
     background-image: url(../images/clients-filter.png);
     background-position: center;
     background-size: contain;
@@ -494,6 +494,93 @@
   &__title {
     text-align: center;
     font-size: 42px;
+    margin-bottom: 100px;
+  }
+  &__courusel {
+    &-wraper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #141414;
+      padding: 60px 30px;
+    }
+  }
+  &__item {
+    &-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #fff;
+      &:hover {
+        .clients__item-num {
+          opacity: 1;
+          color: $accent;
+        }
+      }
+    }
+    &-num {
+      position: absolute;
+      @extend %Montserrat-600;
+      color: #ffffff;
+      opacity: 0.1;
+      font-size: 156px;
+      top: -14px;
+      right: -28px;
+      z-index: -1;
+    }
+  }
+}
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 74px;
+  width: 74px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+  top: auto;
+  bottom: -100px;
+  // -webkit-transform: translate(0, -50%);
+  // -ms-transform: translate(0, -50%);
+  // transform: translate(0, -50%);
+  padding: 0;
+  border: 1px solid $accent;
+  border-radius: 50%;
+  outline: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  &::before {
+    content: "";
+  }
+}
+.slick-prev {
+  left: 44%;
+  background-image: url(../images/courusel-V-left.svg);
+  &:hover,
+  &:focus {
+    background-image: url(../images/courusel-V-left.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+}
+.slick-next {
+  right: 44%;
+  background-image: url(../images/courusel-V-right.svg);
+  &:hover,
+  &:focus {
+    background-image: url(../images/courusel-V-right.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
   }
 }
 
