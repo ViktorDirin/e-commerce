@@ -586,6 +586,146 @@
 
 // ----------------------------------- CLIENTS END ----------------------------
 
+// ----------------------------------- REQUEST ----------------------------
+
+.request {
+  padding: 200px 0;
+  background-color: #202020;
+  background-image: url(../images/request-filter.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    width: 60%;
+    &-text {
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    &-title {
+      color: $accent;
+      font-size: 41px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 60px;
+    }
+    &-list {
+      padding: 56px 54px 52px;
+      border: 4px solid $accent;
+    }
+    &-item {
+      position: relative;
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 8px;
+      padding-left: 12px;
+      &:first-child {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 26px;
+        &::before {
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+      &::before {
+        position: absolute;
+        content: "+";
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  &__form {
+    padding: 30px;
+    width: 32%;
+    background-color: #ffffff;
+    &-input,
+    &-textarea {
+      width: 100%;
+      border: 0.5px solid #d0d0d0;
+      background: #f6f6f6;
+      padding: 14px 20px;
+      color: #595959;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    &-agree {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      &:checked {
+        & ~ .checkmark::after {
+          display: block;
+        }
+      }
+      &-label {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding-left: 34px;
+        margin-bottom: 16px;
+        cursor: pointer;
+        color: #595959;
+        font-size: 10px;
+        font-weight: 400;
+        &:hover {
+          .checkmark {
+            border: 0.5px solid #595959;
+          }
+        }
+      }
+    }
+    &-robot {
+      color: #000;
+      padding: 14px 20px;
+    }
+    &-btn {
+      padding: 12px;
+      width: 100%;
+      background: linear-gradient(113deg, #de9b55 -8.73%, #ee5432 93.23%);
+      box-shadow: 0px 4px 4px 0px rgba(222, 155, 85, 0.3);
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 4px 1px $accent;
+      }
+    }
+  }
+}
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #fff;
+  border: 0.5px solid #d0d0d0;
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 7px;
+    height: 11px;
+    border: solid $accent;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+// ----------------------------------- REQUEST END ----------------------------
+
 // ----------------------------------- FOOTER ----------------------------
 
 .footer {
