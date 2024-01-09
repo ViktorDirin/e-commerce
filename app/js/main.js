@@ -7,3 +7,8 @@ $(document).ready(function () {
         slidesToScroll: 1
     });
 });
+
+$('.header__nav-btn').on('click', function () {
+    $('.header__nav-burger').toggleClass('header__nav-burger--active');
+    $('.header__nav-list').toggleClass('header__nav-list--active');
+})
