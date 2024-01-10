@@ -22,10 +22,38 @@
       }
     }
   }
+  .cases {
+    &__item {
+      &-img {
+        max-width: 220px;
+      }
+      &-title {
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 /* Large Devices, Wide Screens  ----------------------------------------------- 1200 --------------------*/
 @media only screen and (max-width: 1200px) {
+  .cases {
+    &__wraper {
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    &__item {
+      width: 48%;
+      margin-bottom: 40px;
+      &-img {
+        min-width: 100%;
+        height: 280px;
+        object-fit: cover;
+      }
+      &-title {
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 /* Medium Devices, Desktops  -------------------------- 1024 -----------------------------------------*/
@@ -130,20 +158,63 @@
       }
     }
   }
-  //   .cards {
-  //     &__item {
-  //       &:nth-child(4) {
-  //         order: 6;
-  //       }
-  //       &:nth-child(5) {
-  //         order: 5;
-  //       }
-  //       &-link {
-  //         width: auto;
-  //         height: 66px;
-  //       }
-  //     }
-  //   }
+  .howwework {
+    &__inner,
+    &-wraper {
+      padding-bottom: 0;
+    }
+  }
+  .cases {
+    &__item {
+      &-img {
+        height: 220px;
+      }
+    }
+  }
+  .request {
+    background-size: cover;
+    padding: 40px 0;
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__info,
+    &__form {
+      width: 100%;
+      &-textarea {
+        width: 100%;
+      }
+    }
+    &__info {
+      margin-bottom: 40px;
+    }
+    &__form {
+      background-color: #ffffff1a;
+      &-agree-label {
+        color: #ffffff;
+      }
+    }
+  }
+  .footer {
+    &__inner {
+      padding: 40px 0;
+      flex-wrap: wrap;
+    }
+    &__logo {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &__address,
+    &__social {
+      width: fit-content;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+    &__map {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 }
 
 /* Small Devices, Tablets  ----------------------------------------------- 768 --------------------*/
@@ -224,6 +295,92 @@
       font-family: "Montserrat-Bold";
     }
   }
+  .features {
+    &__inner {
+      padding-bottom: 0;
+    }
+    &__wraper {
+      margin-bottom: 0;
+    }
+    &__tabs-content {
+      display: flex;
+    }
+    &__tabs-content + .d-none,
+    &__info-options,
+    &__tabs-label {
+      display: none;
+    }
+    &__info {
+      width: 100%;
+      text-align: center;
+      &-text {
+        margin: 0 auto 30px;
+        width: 100%;
+      }
+    }
+    &__img {
+      display: none;
+      &-mobile {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+  #content1,
+  #content2 {
+    border-bottom: 1px solid #ffffff66;
+  }
+  .cases {
+    &__item {
+      width: 98%;
+      &-img {
+        height: 260px;
+        object-fit: cover;
+      }
+    }
+    &__order {
+      flex-wrap: wrap;
+      background-color: #6f44a7;
+      padding: 36px 26px;
+      &-text {
+        position: relative;
+        padding: 0;
+        padding-left: 60px;
+        text-align: left;
+        line-height: 22px;
+        margin-bottom: 10px;
+        background-color: transparent;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 43px;
+          height: 43px;
+          top: 0;
+          left: 0;
+          background-image: url(../images/icons/cases-love.svg);
+        }
+      }
+      &-link {
+        background-color: transparent;
+        padding: 16px 52px;
+        border: 2px solid #ffffff;
+        border-radius: 4px;
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  .clients__inner {
+    padding: 80px 0 80px;
+  }
+  .slick-prev,
+  .slick-next {
+    bottom: -76px;
+  }
+  .request {
+    padding: 40px 0;
+  }
 }
 
 /* Small Devices, Tablets ----------------------------------------------- 576 --------------------*/
@@ -270,10 +427,24 @@
       margin-bottom: 10px;
     }
   }
-
   .top__info-img-bg {
     width: 86vw;
     height: 86vw;
+  }
+  .clients__title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+  .slick-prev,
+  .slick-next {
+    width: 50px;
+    height: 50px;
+  }
+  .slick-prev {
+    transform: translateX(-80px);
+  }
+  .slick-next {
+    transform: translateX(80px);
   }
 }
 
@@ -295,11 +466,11 @@
   }
   .top__connect-btn {
     position: relative;
-    padding: 15px 110px 15px 15px;
+    padding: 10px 98px 10px 10px;
     background-color: #ff834e;
     color: #fff;
     &::after {
-      width: 48px;
+      width: 42px;
     }
   }
   .howwework {
@@ -321,6 +492,85 @@
     &-link {
       font-size: 12px;
       line-height: 14px;
+    }
+  }
+  .cases {
+    &__title {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    &__wraper {
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    &__item {
+      padding: 16px;
+      width: 100%;
+      margin-bottom: 20px;
+      &-img {
+        min-width: 100%;
+        height: 150px;
+        margin-bottom: 8px;
+      }
+      &-title {
+        margin-bottom: 8px;
+      }
+      &-text {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .cases {
+    &__inner {
+      padding: 60px 0;
+    }
+    &__order {
+      padding: 26px 14px;
+      &-text {
+        font-size: 14px;
+        line-height: 18px;
+      }
+      &-link {
+        padding: 8px 44px;
+      }
+    }
+  }
+  .request {
+    padding: 40px 0;
+    &__info {
+      display: flex;
+      flex-direction: column;
+      &-text {
+        order: 1;
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+      &-title {
+        font-size: 22px;
+        margin-bottom: 30px;
+      }
+      &-list {
+        padding: 20px 12px 10px;
+        margin-bottom: 30px;
+      }
+    }
+    &__form {
+      padding: 15px 10px;
+    }
+  }
+  .footer {
+    &__inner {
+      padding: 20px 0;
+      color: #ffffff66;
+    }
+    &__logo {
+      margin-bottom: 20px;
+    }
+    &__address,
+    &__social {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
     }
   }
 }
