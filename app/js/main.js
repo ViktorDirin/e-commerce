@@ -33,6 +33,28 @@ $(".header__nav-btn").on("click", function () {
     $(".header__nav-list").toggleClass("header__nav-list--active");
 });
 
-// $(".cards__item-btn").on("click", function (e) {
-//     $(this).next(".card__item-list").slideToggle('slow');
-// });
+$(".cards__item").on("click", function (e) {
+    if (window.innerWidth < 768) {
+        console.log('worrrrrrrrk');
+        $(this).find(".cards__item-descr").slideToggle('slow');
+    };
+});
+
+$('.cards__item-link').on('click', function () {
+    if (window.innerWidth > 768) {
+        let modalTitle = $(this).find(".cards__item-link-text").text();
+        let modalText = $(this).closest(".cards__item").find(".cards__item-descr").text();
+        // console.log(modalText);
+        $('.modal__inner-title').text(modalTitle);
+        $('.modal__inner-text').text(modalText);
+        $('.modal__filter').fadeIn(200);
+    };
+
+});
+$('.modal__close, .modal__filter').on('click', function () {
+    if (window.innerWidth > 768) {
+        // console.log('mooooodal');
+        $('.filter, .modal').fadeOut(200);
+    };
+
+});

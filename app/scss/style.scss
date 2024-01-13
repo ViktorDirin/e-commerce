@@ -285,6 +285,7 @@
         }
         &-link {
           text-decoration: underline;
+          cursor: pointer;
           &-text {
             display: none;
           }
@@ -307,6 +308,13 @@
           }
         }
       }
+    }
+    &-descr {
+      display: none;
+      width: 100%;
+      order: 1;
+      padding: 30px 20px 20px;
+      color: #141414;
     }
     &-decor {
       display: none;
@@ -815,6 +823,78 @@
   }
 }
 // ----------------------------------- REQUEST END ----------------------------
+
+// ----------------------------------- MODAL ----------------------------
+.modal {
+  &__filter {
+    backdrop-filter: saturate(50%) blur(20px);
+    backdrop-filter: hue-rotate(90deg) saturate(30%);
+    backdrop-filter: saturate(30%);
+    backdrop-filter: brightness(30%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 12;
+  }
+  &__inner {
+    width: 624px;
+    padding: 62px 52px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #262626;
+    z-index: 15;
+    &-title {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    &-text {
+      line-height: 22px;
+    }
+  }
+  &__close {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: -36px;
+    right: -36px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 38px;
+      height: 3px;
+      bottom: 14px;
+      left: -3px;
+      background-color: #c4c4c4;
+      transform: rotate(45deg);
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 38px;
+      height: 3px;
+      bottom: 14px;
+      left: -3px;
+      background-color: #c4c4c4;
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      &::before,
+      &::after {
+        background-color: #f4f4f4;
+      }
+    }
+  }
+}
+
+// ----------------------------------- MODAL END ----------------------------
 
 // ----------------------------------- FOOTER ----------------------------
 

@@ -164,6 +164,9 @@
       padding-bottom: 0;
     }
   }
+  .cards__item-link {
+    width: auto;
+  }
   .cases {
     &__item {
       &-img {
@@ -231,7 +234,7 @@
     }
     &-wraper {
       padding-top: 60px;
-      padding-bottom: 0;
+      padding-bottom: 60px;
     }
   }
   .cards__item {
@@ -242,9 +245,41 @@
     &:nth-child(5) {
       order: 5;
     }
-    pointer-events: none;
+    &:hover {
+      .cards__item {
+        &-num {
+          color: #141414;
+          opacity: 1;
+        }
+        &-link {
+          text-decoration: none;
+          pointer-events: none;
+          &-text {
+            display: inline-block;
+          }
+          &-hover {
+            display: none;
+          }
+          &::after {
+            display: none;
+            position: absolute;
+            content: "+";
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            // right: -26px;
+            margin-left: 10px;
+            background-color: $accent;
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     text-align: left;
     width: 100%;
@@ -293,6 +328,9 @@
       width: auto;
       height: auto;
       font-family: "Montserrat-Bold";
+    }
+    &-btn {
+      display: flex;
     }
   }
   .features {
